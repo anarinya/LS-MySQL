@@ -23,7 +23,7 @@ Download MySQL.
 Start MySQL server by running the command `mysqld`.
 Type `mysql -u root` to access the MySQL command line tool as the root user.
 Create a database called todos: `create database todos;`
-Add a user that has access to this new database: `GRANT ALL PRIVILEGES ON todos.* To 'USERNAME'@'localhost' IDENTIFIED BY 'PASSWORD'`
+Add a user that has access to this new database: `GRANT ALL PRIVILEGES ON todos.* To 'USERNAME'@'localhost' IDENTIFIED BY 'PASSWORD';`
 Create your express server.  Connect to the database with this connection string: `mysql://USERNAME:PASSWORD@localhost:3306/todos`.
 
 Build the following routes:
