@@ -22,17 +22,17 @@
 Download MySQL.
 Start MySQL server by running the command `mysqld`.
 Type `mysql -u root` to access the MySQL command line tool as the root user.
-Create a database called todos: `create database todos;`
-Add a user that has access to this new database: `GRANT ALL PRIVILEGES ON todos.* To 'USERNAME'@'localhost' IDENTIFIED BY 'PASSWORD';`
-Create your express server.  Connect to the database with this connection string: `mysql://USERNAME:PASSWORD@localhost:3306/todos`.
+Create a database called ice-cream: `create database icecream;`
+Add a user that has access to this new database: `GRANT ALL PRIVILEGES ON icecream.* To 'USERNAME'@'localhost' IDENTIFIED BY 'PASSWORD';`
+Create your express server.  Connect to the database with this connection string: `mysql://USERNAME:PASSWORD@localhost:3306/icecream`.
 
 Build the following routes:
-* [POST] `/todos` This route should save a new todo to the todos table.
-* [GET] `/todos` This route will return an array of all todos.
-* [GET] `/todos/:id` This route will return the todo with the matching `id`.  The `id` is automatically generated.
-* [DELETE] `/todos/:id` This route should delete the specified todo.
+* [POST] `/icecream` This route should save a new ice cream flavor to the ice cream table.
+* [GET] `/icecream` This route will return an array of all the different ice cream flavors.
+* [GET] `/icecream/:id` This route will return the ice cream with the matching `id`.  The `id` is automatically generated.
+* [DELETE] `/icecream/:id` This route should delete the specified ice cream.
 
 ## Extra Credit
 
 Implement the following route:
-* [PUT] `/todos/:id` Toggle the specified todo to either complete or incomplete.
+* [PUT] `/icecream/:id` Add an `inStock` column in the ice cream table and toggle this column between `true` and `false`.
